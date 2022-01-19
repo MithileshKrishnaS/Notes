@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+body{
+  font-family: 'Sora', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header{
   color: white;
+  background-color: rgba(255, 187, 0, 0.938);
+  margin-top: -1.2%;
+  height: 8vh;
+  padding: 1%;
+  font-size: 1.2em;
 }
 
-.App-link {
-  color: #61dafb;
+.note{
+  padding: 1%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.note>input{
+  border: transparent;
+  height: 3vh;
+  font-size: 1.5em;
+  outline: none;
+  width: 28vw;
+}
+
+.note>button{
+  position: absolute;
+  margin-left: 23%;
+  background-color: rgba(255, 187, 0, 0.938);
+  color: white;
+  border: transparent;
+  padding: 0.3%;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 90%;
+  width: 2.6vw;
+  cursor: pointer;
+}
+
+.totalnote{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.eachnote{
+  margin: 10%;
+  padding: 2%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 22vh;
+  width: 22vw;
+  text-align: justify;
+}
+
+.eachnote>button{
+  position: relative;
+  float: right;
+  cursor: pointer;
+  /* left: 15%;
+  margin-top: 50px; */
+  bottom: 0%;
+  background-color: rgba(255, 187, 0, 0.938);
+  color: white;
+  border: transparent;
+  padding: 0.5%;
+  font-size: 1.2em;
+  font-weight: bolder;
+  border-radius: 90%;
+  width: 2.2vw;
+  height: 4.5vh;
+}
+
+.title{
+  height:3vh;
+  font-size: 1.5em;
+}
+
+.content{
+  height: 6vh;
+  color: rgba(15, 15, 15, 0.739);
+}
+
+@media only screen and (max-width: 900px) {
+  .totalnote{
+    display: grid;
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header{
+    height: 13vh;
+    padding: 5%;
+    font-size: 1em;
+  }
+
+  .note,.eachnote{
+    
+    width: 70vw;
+  }
+
+  .note{
+    height: 20vh;
+    padding: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .eachnote{
+    height: 40vh;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .note>button{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 10%;
+    left: 50%;
+  }
+
+  .note>input{
+    width: 60vw;
+  }
+
+  .eachnote>button{
+    position: relative;
+    left: -5%;
+    width: 50px;
+    height: 50px;
+    top: 40%;
   }
 }
